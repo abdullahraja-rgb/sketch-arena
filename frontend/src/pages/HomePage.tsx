@@ -5,7 +5,7 @@ export function HomePage() {
     <section>
       <p className="eyebrow">Home Page</p>
       <p>Welcome to sketch arena. Coming Soon...</p>
-      <Link className="primary-link" to="/login"></Link>
+      <Link className="primary-link" to="/login">Login</Link>
     </section>
   );
 }

@@ -1,16 +1,24 @@
-import { useState } from "react";
-import heroImg from "./assets/hero.png";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
+import { Route, Routes } from "react-router-dom";
+import { DashboardPage } from "./pages/Dashboard";
+import { HomePage } from "./pages/HomePage";
+import { LoginPage } from "./pages/LoginPage";
+import { NotFoundPage } from "./pages/NotFoundPage";
+import { AppLayout } from "./app/AppLayout";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div>
-      <h1>Sketch Arena</h1>
-    </div>
+    <Routes>
+      <Route element={<AppLayout />}>
+        {/* home page at / */}
+        <Route index element={<HomePage />} />
+        {/* open LoginPage at /page */}
+        <Route path="login" element={<LoginPage />} />
+        <Route path="dashboard" element={<DashboardPage />} />
+        {/* wildcard route - matches any location not in the earlier routes */}
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   );
 }
 
