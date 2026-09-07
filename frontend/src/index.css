@@ -27,3 +27,11 @@ button,
 input {
   font: inherit;
 }
+
+.branding {
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+}
