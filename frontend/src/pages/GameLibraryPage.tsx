@@ -15,6 +15,7 @@ export function GameLibraryPage() {
           <Link to="/dashboard">Back</Link>
         </div>
         <article>
+          {/* dont announce a pencil for screen-readers */}
           <div aria-hidden="true">✎</div>
           <div>
             <h2>Draw; Guess</h2>
