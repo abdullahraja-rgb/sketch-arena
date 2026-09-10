@@ -13,12 +13,12 @@ export function ScreenFrame({
   showProfile = false,
 }: ScreenFrameProps) {
   return (
-    <div>
-      <header>
+    <div className="screen-frame">
+      <header className="top-bar">
         <Branding />
         {showProfile && <ProfileButton />}
       </header>
-      <main>{children}</main>
+      <main className="screen-content">{children}</main>
       <Footer />
     </div>
   );

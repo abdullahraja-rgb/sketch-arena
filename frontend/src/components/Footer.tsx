@@ -1,8 +1,8 @@
 export function Footer() {
   return (
-    <footer>
+    <footer className="footer">
       <span>Sketch Arena</span>
-      <span>Copyright 2026</span>
+      <span>© 2026</span>
     </footer>
   );
 }

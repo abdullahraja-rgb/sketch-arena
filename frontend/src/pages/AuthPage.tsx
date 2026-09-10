@@ -18,14 +18,19 @@ export function AuthPage({ mode }: AuthPageProps) {
 
   return (
     <ScreenFrame>
-      <section>
-        <p>Player Access</p>
+      <section className="auth-content">
+        <p className="system-label">Player Access</p>
         <h1>{isLogin ? "Login" : "Register"}</h1>
         <form onSubmit={submit_form}>
           {!isLogin && (
             <label>
               Name
-              <input name="name" autoComplete="name" required />
+              <input
+                className="input-box"
+                name="name"
+                autoComplete="name"
+                required
+              />
             </label>
           )}
           <label>
@@ -36,9 +41,11 @@ export function AuthPage({ mode }: AuthPageProps) {
             Password
             <input name="password" type="password" minLength={8} required />
           </label>
-          <button type="submit">Continue</button>
+          <button className="action action-primary action-wide" type="submit">
+            Continue
+          </button>
         </form>
-        <Link to={isLogin ? "/register" : "/login"}>
+        <Link className="text-link" to={isLogin ? "/register" : "/login"}>
           {isLogin ? "New Player? Register" : "Already Registered? Login"}
         </Link>
       </section>
